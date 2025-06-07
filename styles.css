@@ -1,27 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+
+@font-face {
+  font-family: 'Antio';
+  src: url('/fonts/antio.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     background: #fafafa;
     color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #222;
 }
+
 header, footer {
     background: #222;
     color: #fff;
     padding: 1rem;
     text-align: center;
 }
+
 main {
-    padding: 2rem;
     max-width: 800px;
     margin: 0 auto;
+    flex: 1;
 }
+
 section {
     margin-bottom: 2rem;
 }
+
 a {
     color: #007acc;
 }
+
 a:hover {
     text-decoration: underline;
+}
+
+h1, h2 {
+    font-family: 'Amatic SC', sans-serif;
+}
+
+h1 {
+    font-size: 5rem;
+    margin-bottom: .5rem;
+}
+
+.font-md {
+    font-size: 2rem;
+}
+
+.sub-header {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.amatic-sc-regular {
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.amatic-sc-bold {
+  font-family: "Amatic SC", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* .flyer-section {
+    width: 100vw;
+    height: 20rem;
+    transform: translateX(-50%);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+} */
+ 
+.flyer-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
