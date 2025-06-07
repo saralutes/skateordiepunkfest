@@ -25,3 +25,11 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+h1 {
+    font-family: 'Antio';
+}
+
+h2 {
+    font-family: 'Amatic SC';
+}
