@@ -203,3 +203,145 @@ h1 {
 }
 
 /* --- End Hero Section Styles --- */
+
+/* --- Bands & Sponsors Section Styles --- */
+
+/* .bands-sponsors-section {
+  width: 100%;
+  padding: 2rem 0;
+  background: #f8f8f8;
+} */
+
+/* .bands-sponsors-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  max-width: 1100px;
+  margin: 0 auto;
+  gap: 2rem;
+} */
+
+/* .bands-sponsors-col {
+  flex: 1 1 0;
+  min-width: 300px;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: #fff;
+  border-radius: 10px;
+  padding: 2rem 1rem;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+} */
+
+/* --- Bands & Sponsors Section Styles --- */
+
+.bands-sponsors-section {
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  padding: 2rem 0;
+  /* background: #f8f8f8; */
+  box-sizing: border-box;
+}
+
+.bands-sponsors-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  gap: 2rem;
+  box-sizing: border-box;
+}
+
+.bands-sponsors-col {
+  flex: 1 1 0;
+  min-width: 300px;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: #333;
+  border-radius: 10px;
+  padding: 2rem 1rem;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+  box-sizing: border-box;
+}
+
+/* Sponsors styles (overrides previous .sponsor-logos for 2-column layout) */
+.sponsors-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.sponsor-logos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  width: 100%;
+  justify-items: center;
+}
+
+.sponsor-col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sponsor-logo-link {
+  display: inline-block;
+}
+
+.sponsor-logo-img {
+  max-width: 120px;
+  max-height: 60px;
+  margin-bottom: 0.5rem;
+}
+
+/* Bands styles */
+.bands-title {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.band-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.band-list li {
+  font-size: 1.15rem;
+}
+
+.band-list a {
+  color: #1976d2;
+  text-decoration: none;
+  transition: color 0.2s;
+  font-weight: 500;
+}
+
+.band-list a:hover,
+.band-list a:focus {
+  color: #d32f2f;
+  text-decoration: underline;
+}
+
+/* --- End Bands & Sponsors Section Styles --- */
