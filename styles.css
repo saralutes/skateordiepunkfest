@@ -8,57 +8,57 @@
 }
 
 body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        color: #333;
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-        background: #222;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #222;
 }
 
 header, footer {
-        background: #222;
-        color: #fff;
-        padding: 1rem;
-        text-align: center;
+    background: #222;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
 }
 
 main {
-        max-width: 50rem;
-        margin: 0 auto;
-        flex: 1;
+    max-width: 50rem;
+    margin: 0 auto;
+    flex: 1;
 }
 
 section {
-        margin-bottom: 2rem;
+    margin-bottom: 2rem;
 }
 
 a {
-        color: #007acc;
+    color: #007acc;
 }
 
 a:hover {
-        text-decoration: underline;
+    text-decoration: underline;
 }
 
 h1, h2 {
-        font-family: 'Amatic SC', sans-serif;
+    font-family: 'Amatic SC', sans-serif;
 }
 
 h1 {
-        font-size: 5rem;
-        margin-bottom: .5rem;
+    font-size: 5rem;
+    margin-bottom: .5rem;
 }
 
 .font-md {
-        font-size: 2rem;
+    font-size: 2rem;
 }
 
 .sub-header {
-        margin-top: 0;
-        margin-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .amatic-sc-regular {
@@ -72,17 +72,6 @@ h1 {
     font-weight: 700;
     font-style: normal;
 }
-
-/* .flyer-section {
-        width: 100vw;
-        height: 20rem;
-        transform: translateX(-50%);
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0;
-} */
  
 .flyer-section img {
         width: 100%;
@@ -100,10 +89,6 @@ h1 {
 .image {
         width: 95%;
 }
-
-/* .sponsors-section {
-    padding: 2rem 0;
-} */
 
 .sponsors-title {
     text-align: center;
@@ -178,7 +163,6 @@ h1 {
     text-align: center;
     display: flex;
     flex-direction: column;
-    /* justify-content: center; */
 }
 
 .get-involved-title {
@@ -206,45 +190,12 @@ h1 {
 
 /* --- Bands & Sponsors Section Styles --- */
 
-/* .bands-sponsors-section {
-  width: 100%;
-  padding: 2rem 0;
-  background: #f8f8f8;
-} */
-
-/* .bands-sponsors-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: stretch;
-  max-width: 1100px;
-  margin: 0 auto;
-  gap: 2rem;
-} */
-
-/* .bands-sponsors-col {
-  flex: 1 1 0;
-  min-width: 300px;
-  max-width: 480px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  background: #fff;
-  border-radius: 10px;
-  padding: 2rem 1rem;
-  box-shadow: 0 4px 18px rgba(0,0,0,0.08);
-} */
-
-/* --- Bands & Sponsors Section Styles --- */
-
 .bands-sponsors-section {
   width: 100vw;
   max-width: 100vw;
   margin-left: 50%;
   transform: translateX(-50%);
   padding: 2rem 0;
-  /* background: #f8f8f8; */
   box-sizing: border-box;
 }
 
