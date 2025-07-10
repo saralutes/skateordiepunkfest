@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Mono&display=swap');
 
 /* Import Google Fonts for Lora (for Sleepersound) */
 @import url('https://fonts.googleapis.com/css?family=Lora:700&display=swap');
@@ -20,7 +22,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Libertinus Mono", monospace;
     margin: 0;
     padding: 0;
     color: #333;
@@ -46,19 +48,27 @@ section {
     margin-bottom: 2rem;
 }
 
+.permanent-marker-regular {
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 a {
-    color: #007acc;
+    color: crimson;
 }
 
 a:hover {
     text-decoration: underline;
 }
 
-h1, h2 {
+h2 {
     font-family: 'Amatic SC', sans-serif;
 }
 
 h1 {
+    font-family: "Permanent Marker", cursive;
+    font-weight: 800;
     font-size: 5rem;
     margin-bottom: .5rem;
 }
@@ -127,13 +137,13 @@ h1 {
 }
 
 .hero-col-left {
-    flex: 0 1 70%;
-    max-width: 70%;
+    flex: 1 1 0;
+    width: 50%;
 }
 
 .hero-col-right {
-    flex: 0 1 30%;
-    max-width: 30%;
+    flex: 1 1 0;
+    width: 50%;
     /* background: #222; */
     border-radius: 1rem;
     /* padding: 2rem 1.5rem; */
@@ -161,7 +171,7 @@ h1 {
     color: #fff;
     margin-top: 0;
     margin-bottom: 1.5rem;
-    font-size: 4rem;
+    font-size: 3rem;
     letter-spacing: 0.05em;
     text-align: center;
     width: 100%;
@@ -175,13 +185,13 @@ h1 {
 }
 
 .bands-list li {
-    margin: 1.1rem 0;
+    margin: 1.5rem 0;
 }
 
 .band-link {
     color: #fff;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 700;
     transition: color 0.2s;
     letter-spacing: 0.02em;
@@ -198,14 +208,14 @@ h1 {
 /* Specific font for Sleepersound */
 .band-sleepersound {
     font-family: 'Lora', serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 700;
 }
 
 /* Specific font for Key of Evil */
 .band-keyofevil {
     font-family: 'Misery Gymnast', cursive, sans-serif;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: normal;
     letter-spacing: 0.06em;
 }
@@ -214,8 +224,8 @@ h1 {
 @media (max-width: 900px) {
     .hero-container {
         flex-direction: column;
-        gap: 1.5rem;
-        min-height: unset;
+        gap: 1rem;
+        min-height: 20rem;
     }
     .hero-col-left,
     .hero-col-right {
@@ -224,17 +234,17 @@ h1 {
         width: 100%;
     }
     .hero-flyer-img {
-        max-height: 22rem;
+        max-height: 25rem;
         object-fit: contain;
     }
     .hero-col-right {
         padding: 2rem 1.2rem;
     }
     .bands-title {
-        font-size: 1.6rem;
+        font-size: 2rem;
         margin-bottom: 1rem;
     }
     .band-link, .band-sleepersound, .band-keyofevil {
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 }
