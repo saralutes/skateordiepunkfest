@@ -1,4 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Mono&display=swap');
+
+/* Import Google Fonts for Lora (for Sleepersound) */
+@import url('https://fonts.googleapis.com/css?family=Lora:700&display=swap');
+
+/* Import Misery Gymnast (for Key of Evil) via @font-face, if you have the font file */
+@font-face {
+    font-family: 'Misery Gymnast';
+    src: url('fonts/MiseryGymnast-Mj9v.ttf') format('ttf');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 @font-face {
   font-family: 'Antio';
@@ -8,7 +22,7 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Libertinus Mono", monospace;
     margin: 0;
     padding: 0;
     color: #333;
@@ -35,19 +49,27 @@ section {
     margin-bottom: 2rem;
 }
 
+.permanent-marker-regular {
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
 a {
-    color: #007acc;
+    color: crimson;
 }
 
 a:hover {
     text-decoration: underline;
 }
 
-h1, h2 {
+h2 {
     font-family: 'Amatic SC', sans-serif;
 }
 
 h1 {
+    font-family: "Permanent Marker", cursive;
+    font-weight: 800;
     font-size: 5rem;
     margin-bottom: .5rem;
 }
@@ -84,12 +106,12 @@ h1 {
     padding: 0;
 } */
  
-.flyer-section img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
+/* .flyer-section img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+} */
 
 .centered {
     display: flex;
@@ -97,6 +119,144 @@ h1 {
     align-items: center;
 }
 
-.image {
-    width: 95%;
+/* .image {
+        width: 95%;
+} */
+
+/* General Styles */
+.hero-section {
+    width: calc(100vw - 4rem);
+    padding: 2rem 0;
+    padding: 2rem 0;
+    /* background: #181818; */
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    /* max-width: 1200px; */
+    margin: 0 auto;
+    min-height: 25rem;
+    gap: 1rem;
+}
+
+.hero-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+}
+
+.hero-col-left {
+    flex: 1 1 0;
+    width: 50%;
+}
+
+.hero-col-right {
+    flex: 1 1 0;
+    width: 50%;
+    /* background: #222; */
+    border-radius: 1rem;
+    /* padding: 2rem 1.5rem; */
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: center;
+    min-width: 0;
+}
+
+.hero-flyer-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 1rem;
+    max-height: 40rem;
+    /* background: #111; */
+}
+
+/* Bands Section Styles */
+.bands-title {
+    color: #fff;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+    letter-spacing: 0.05em;
+    text-align: center;
+    width: 100%;
+}
+
+.bands-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.bands-list li {
+    margin: 1.5rem 0;
+}
+
+.band-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    transition: color 0.2s;
+    letter-spacing: 0.02em;
+    display: inline-block;
+    word-break: break-word;
+}
+
+.band-link:hover,
+.band-link:focus {
+    color: crimson;
+    text-decoration: underline;
+}
+
+/* Specific font for Sleepersound */
+.band-sleepersound {
+    font-family: 'Lora', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Specific font for Key of Evil */
+.band-keyofevil {
+    font-family: 'Misery Gymnast', cursive, sans-serif;
+    font-size: 1.5rem;
+    font-weight: normal;
+    letter-spacing: 0.06em;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+    .hero-container {
+        flex-direction: column;
+        gap: 1rem;
+        min-height: 20rem;
+    }
+    .hero-col-left,
+    .hero-col-right {
+        flex: unset;
+        max-width: 100%;
+        width: 100%;
+    }
+    .hero-flyer-img {
+        max-height: 25rem;
+        object-fit: contain;
+    }
+    .hero-col-right {
+        padding: 2rem 1.2rem;
+    }
+    .bands-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    .band-link, .band-sleepersound, .band-keyofevil {
+        font-size: 1rem;
+    }
 }
