@@ -177,11 +177,12 @@ h1 {
         gap: 1rem;
         min-height: 20rem;
     }
-    .row {
+    /* .row {
         flex-direction: column-reverse;
-    }
+    } */
     .bands-title {
         margin-top: 0;
+        font-size: 2.5rem;
     }
     h1 {
         font-size: 5rem;
