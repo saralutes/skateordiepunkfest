@@ -177,6 +177,20 @@ h1 {
         gap: 1rem;
         min-height: 20rem;
     }
+    .row {
+        flex-direction: column-reverse;
+    }
+    .bands-title {
+        margin-top: 0;
+    }
+    h1 {
+        font-size: 5rem;
+        -webkit-text-stroke-width: 2px;
+    }
+    .flyer-container {
+        border-radius: 0;
+        padding: .5rem;
+    }
     .hero-col-left,
     .hero-col-right {
         flex: unset;
@@ -190,11 +204,11 @@ h1 {
     .hero-col-right {
         padding: 2rem 1.2rem;
     }
-    .bands-title {
+    /* .bands-title {
         font-size: 2rem;
         margin-bottom: 1rem;
     }
     .band-link, .band-sleepersound, .band-keyofevil {
         font-size: 1rem;
-    }
+    } */
 }
