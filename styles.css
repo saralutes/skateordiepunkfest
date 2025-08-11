@@ -29,7 +29,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: #222;
+    background: #222 url('skateordiebackgroundimage.svg') no-repeat center center;
+    background-size: cover;
 }
 
 header, footer {
@@ -42,7 +43,8 @@ header, footer {
 main {
     margin: 0 auto;
     flex: 1;
-    background: #222;
+    /* background: #222 url('skateordiebackgroundimage.svg') no-repeat center center;
+    background-size: cover; */
 }
 
 section {
@@ -68,7 +70,7 @@ h2 {
 }
 
 h1 {
-    font-family: "Permanent Marker", cursive;
+    font-family: 'Antio', cursive;
     font-weight: 800;
     font-size: 5rem;
     margin-bottom: .5rem;
