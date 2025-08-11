@@ -33,7 +33,7 @@ body {
     background-size: cover;
 }
 
-header, footer {
+footer {
     background: #222;
     color: #fff;
     padding: 1rem;
@@ -70,10 +70,13 @@ h2 {
 }
 
 h1 {
-    font-family: 'Antio', cursive;
+    font-family: "Amatic SC", cursive;
     font-weight: 800;
-    font-size: 5rem;
+    font-size: 7.5rem;
     margin-bottom: .5rem;
+    color: #ff3131;
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
 }
 
 .font-md {
@@ -97,12 +100,10 @@ h1 {
     font-style: normal;
 }
  
-/* .flyer-section img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-} */
+.flyer-container {
+    background: #333;
+    border-radius: 1rem;
+}
 
 .centered {
         display: flex;
@@ -110,64 +111,6 @@ h1 {
         align-items: center;
 }
 
-/* .image {
-        width: 95%;
-} */
-
-/* General Styles */
-.hero-section {
-    width: calc(100vw - 4rem);
-    padding: 2rem 0;
-    padding: 2rem 0;
-    /* background: #181818; */
-}
-
-.hero-container {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    /* max-width: 1200px; */
-    margin: 0 auto;
-    min-height: 25rem;
-    gap: 1rem;
-}
-
-.hero-col {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-width: 0;
-}
-
-.hero-col-left {
-    flex: 1 1 0;
-    width: 50%;
-}
-
-.hero-col-right {
-    flex: 1 1 0;
-    width: 50%;
-    /* background: #222; */
-    border-radius: 1rem;
-    /* padding: 2rem 1.5rem; */
-    box-sizing: border-box;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    text-align: center;
-    min-width: 0;
-}
-
-.hero-flyer-img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    border-radius: 1rem;
-    max-height: 40rem;
-    /* background: #111; */
-}
 
 /* Bands Section Styles */
 .bands-title {
