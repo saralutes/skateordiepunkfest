@@ -165,7 +165,7 @@ h1 {
 /* Specific font for Key of Evil */
 .band-keyofevil {
     font-family: 'Misery Gymnast', cursive, sans-serif;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: normal;
     letter-spacing: 0.06em;
 }
@@ -188,9 +188,21 @@ h1 {
         font-size: 5rem;
         -webkit-text-stroke-width: 2px;
     }
+    .band-link {
+        font-size: 1rem;
+    }
+    .band-sleepersound {
+        font-size: 1rem;
+    }
+    .band-keyofevil {
+        font-size: 1rem;
+    }
     .flyer-container {
         border-radius: 0;
-        padding: .5rem;
+        padding: .25rem;
+    }
+    .bands-list li {
+        margin: .5rem 0;
     }
     .hero-col-left,
     .hero-col-right {
