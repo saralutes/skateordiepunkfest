@@ -156,19 +156,19 @@ h1 {
 }
 
 /* Specific font for Sleepersound */
-.band-sleepersound {
+/* .band-sleepersound {
     font-family: 'Lora', serif;
     font-size: 1.5rem;
     font-weight: 700;
-}
+} */
 
 /* Specific font for Key of Evil */
-.band-keyofevil {
+/* .band-keyofevil {
     font-family: 'Misery Gymnast', cursive, sans-serif;
     font-size: 2.5rem;
     font-weight: normal;
     letter-spacing: 0.06em;
-}
+} */
 
 /* Responsive styles */
 @media (max-width: 900px) {
@@ -189,12 +189,6 @@ h1 {
         -webkit-text-stroke-width: 2px;
     }
     .band-link {
-        font-size: 1rem;
-    }
-    .band-sleepersound {
-        font-size: 1rem;
-    }
-    .band-keyofevil {
         font-size: 1rem;
     }
     .flyer-container {
