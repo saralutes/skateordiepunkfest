@@ -115,16 +115,16 @@ h1 {
 
 /* Bands Section Styles */
 .bands-title {
-    color: #ff3131;
+    color: #333;
     margin-top: 2rem;
     margin-bottom: 1.5rem;
     font-size: 4rem;
     letter-spacing: 0.05em;
     text-align: center;
-    font-weight: bold;
+    font-weight: bolder;
     width: 100%;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #ff3131;
 }
 
 .bands-list {
