@@ -159,8 +159,21 @@ h1 {
     word-break: break-word;
 }
 
+.sponsor-link {
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    transition: color 0.2s;
+    letter-spacing: 0.02em;
+    display: inline-block;
+    word-break: break-word;
+}
+
 .band-link:hover,
-.band-link:focus {
+.band-link:focus,
+.sponsor-link:hover,
+.sponsor-link:focus {
     color: crimson;
     text-decoration: underline;
 }
