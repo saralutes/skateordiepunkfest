@@ -121,6 +121,11 @@ h1 {
     font-weight: bolder;
 }
 
+.feature-img {
+    height: 2.5rem;
+}
+
+
 .img-small {
     width: 15rem;
 }
@@ -204,6 +209,9 @@ h1 {
 @media (max-width: 900px) {
     .col {
         width: 100%;
+    }
+    .sponsor-img {
+        max-height: 4.25rem;
     }
     .hero-container {
         flex-direction: column;
