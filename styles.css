@@ -122,7 +122,7 @@ h1 {
 }
 
 .feature-img {
-    height: 2.5rem;
+    height: 6rem;
 }
 
 .sponsor-img {
@@ -215,6 +215,9 @@ h1 {
     }
     .sponsor-img {
         max-height: 4.25rem;
+    }
+    .feature-img {
+        height: 2.5rem;
     }
     .hero-container {
         flex-direction: column;
