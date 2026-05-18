@@ -200,7 +200,7 @@ li::marker {
 .flyer2026-img {
     max-width: 100%;
     width: 100%;
-    max-height: 90vh;
+    max-height: 75vh;
     object-fit: contain;
 }
 
