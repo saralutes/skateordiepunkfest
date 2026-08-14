@@ -1,26 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Libertinus+Mono&display=swap');
-@import url(https://db.onlinewebfonts.com/c/cf0b6b86b180d60281be204635c556bf?family=F1805++Jaeck+Map+W00+Italic);
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Libertinus+Mono&display=swap');
 
-/* Import Google Fonts for Lora (for Sleepersound) */
-@import url('https://fonts.googleapis.com/css?family=Lora:700&display=swap');
-
-/* Import Misery Gymnast (for Key of Evil) via @font-face, if you have the font file */
-@font-face {
-    font-family: 'Misery Gymnast';
-    src: url('fonts/MiseryGymnast-Mj9v.ttf') format('ttf');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Antio';
-    src: url('/fonts/antio.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
+/* ==========================================================================
+   Site-wide styles (shared by all pages)
+   ========================================================================== */
 
 body {
     font-family: "Libertinus Mono", monospace;
@@ -29,9 +14,6 @@ body {
     color: #222;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    background: #C6D7EF url('skateordiebackgroundimage.svg') no-repeat center center;
-    background-size: cover;
 }
 
 footer {
@@ -42,20 +24,12 @@ footer {
 }
 
 main {
-    margin: 0 auto;
     flex: 1;
-    /* background: #222 url('skateordiebackgroundimage.svg') no-repeat center center;
-    background-size: cover; */
+    min-height: calc(100vh - 7.5rem);
 }
 
 section {
     margin-bottom: 2rem;
-}
-
-.permanent-marker-regular {
-  font-family: "Permanent Marker", cursive;
-  font-weight: 400;
-  font-style: normal;
 }
 
 a {
@@ -66,11 +40,109 @@ a:hover {
     text-decoration: underline;
 }
 
-h2 {
-    font-family: 'Amatic SC', sans-serif;
+.amatic-sc-bold {
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
-h1 {
+.cinzel-decorative-regular {
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.cinzel-decorative-bold {
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.libertinus-mono-regular {
+  font-family: "Libertinus Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.cinzel-decorative-black {
+  font-family: "Cinzel Decorative", serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+/* ==========================================================================
+   Home page (index.html) styles
+   ========================================================================== */
+
+body.page-home main {
+    position: relative;
+    height: 100vh;
+    background:
+        linear-gradient(180deg, rgba(198, 215, 239, 0) 0%, rgba(51, 51, 51, 0.3) 40%, rgba(51, 51, 51, 0.9) 100%),
+        url('skateordiebackgroundimage.svg') no-repeat center top;
+    background-size: contain;
+    background-attachment: scroll;
+}
+
+.featured-music {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    width: calc(min(100vw, 100vh * 612 / 792) - 4rem);
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+/* When the viewport is narrower/taller than the flyer's own aspect ratio,
+   the image only fills the top portion of main (100vh). Anchor the music
+   block to the image's actual bottom edge instead of centering on main. */
+@media (max-aspect-ratio: 612 / 792) {
+    .featured-music {
+        top: auto;
+        bottom: calc(100vh - (100vw * 792 / 612) - 2rem);
+    }
+}
+
+.band-list-home {
+    margin: 1rem auto 0;
+    padding: 0 1rem;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.band-list-home li {
+    display: inline;
+}
+
+.band-list-home li::before {
+    content: "* ";
+}
+
+.band-list-home li:last-child::after {
+    content: " *";
+}
+
+.band-list-home a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.band-list-home a:hover,
+.band-list-home a:focus {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   2025 event page (2025.html) styles
+   ========================================================================== */
+
+.page-2025 main {
+    padding-bottom: 4rem;
+}
+
+.page-2025 .hero-title {
     font-family: "Amatic SC", cursive;
     font-weight: 800;
     font-size: 7.5rem;
@@ -80,66 +152,45 @@ h1 {
     -webkit-text-stroke-color: black;
 }
 
-.font-md {
+.page-2025 .sub-header-font {
+    font-family: "Amatic SC", sans-serif;
+    font-size: 3rem;
+    color: #333;
+    font-weight: bolder;
+}
+
+.page-2025 .sponsor-title {
+    font-family: "Amatic SC", sans-serif;
+    font-size: 3rem;
+    color: #333;
+    font-weight: bolder;
+}
+
+.page-2025 .tertiary-header {
     font-size: 2rem;
+    color: #333;
 }
 
-.amatic-sc-regular {
-    font-family: "Amatic SC", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.amatic-sc-bold {
-    font-family: "Amatic SC", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-}
- 
-.flyer-container {
+.page-2025 .flyer-container {
     background: #333;
     border-radius: 1rem;
 }
 
-.centered {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-}
-
-.sub-header-font {
-    font-family: "Amatic SC", sans-serif;
-    font-size: 3rem;
-    color: #333;
-    font-weight: bolder;
-}
-
-.sponsor-title {
-    font-family: "Amatic SC", sans-serif;
-    font-size: 3rem;
-    color: #333;
-    font-weight: bolder;
-}
-
-.feature-img {
+.page-2025 .feature-img {
     height: 6rem;
 }
 
-.sponsor-img {
+.page-2025 .sponsor-img {
     max-height: 10rem;
 }
 
-.img-small {
+.page-2025 .img-small {
     width: 15rem;
 }
 
-.tertiary-header {
-    font-size: 2rem;
-    color:#333;
-}
-
 /* Bands Section Styles */
-.bands-title {
+.page-2025 .bands-title {
+    font-family: 'Amatic SC', sans-serif;
     color: #333;
     margin-top: 2rem;
     margin-bottom: 1.5rem;
@@ -152,22 +203,22 @@ h1 {
     -webkit-text-stroke-color: #ff3131;
 }
 
-.bands-list {
+.page-2025 .bands-list {
     list-style: none;
     padding: 0;
     margin: 0;
     width: 100%;
 }
 
-.bands-list li {
+.page-2025 .bands-list li {
     margin: 1.5rem 0;
 }
 
-li::marker {
+.page-2025 li::marker {
     display: none;
 }
 
-.band-link {
+.page-2025 .band-link {
     color: #333;
     text-decoration: none;
     font-size: 1.5rem;
@@ -178,7 +229,7 @@ li::marker {
     word-break: break-word;
 }
 
-.sponsor-link {
+.page-2025 .sponsor-link {
     color: #333;
     text-decoration: none;
     font-size: 1.25rem;
@@ -189,15 +240,15 @@ li::marker {
     word-break: break-word;
 }
 
-.band-link:hover,
-.band-link:focus,
-.sponsor-link:hover,
-.sponsor-link:focus {
+.page-2025 .band-link:hover,
+.page-2025 .band-link:focus,
+.page-2025 .sponsor-link:hover,
+.page-2025 .sponsor-link:focus {
     color: crimson;
     text-decoration: underline;
 }
 
-.flyer2026-img {
+.page-2025 .flyer2026-img {
     max-width: 100%;
     width: 100%;
     max-height: 75vh;
@@ -205,7 +256,7 @@ li::marker {
 }
 
 @media (min-width: 768px) {
-    .flyer2026-img {
+    .page-2025 .flyer2026-img {
         max-width: 700px;
         width: auto;
     }
@@ -213,68 +264,45 @@ li::marker {
 
 /* Responsive styles */
 @media (max-width: 900px) {
-    .col {
+    .page-2025 .col {
         width: 100%;
     }
-    .sponsor-img {
+    .page-2025 .sponsor-img {
         max-height: 4.25rem;
     }
-    .feature-img {
+    .page-2025 .feature-img {
         height: 2.5rem;
     }
-    .hero-container {
+    .page-2025 .hero-container {
         flex-direction: column;
         gap: 1rem;
         min-height: 20rem;
     }
-    /* .row {
-        flex-direction: column-reverse;
-    } */
-    .bands-title {
+    .page-2025 .bands-title {
         margin-top: 0;
         font-size: 2.5rem;
     }
 
-    .sponsor-title {
+    .page-2025 .sponsor-title {
         font-size: 2rem;
     }
 
-    .sponsor-link {
+    .page-2025 .sponsor-link {
         font-size: .75rem;
     }
 
-    h1 {
+    .page-2025 .hero-title {
         font-size: 5rem;
         -webkit-text-stroke-width: 2px;
     }
-    .band-link {
+    .page-2025 .band-link {
         font-size: 1rem;
     }
-    .flyer-container {
+    .page-2025 .flyer-container {
         border-radius: 0;
         padding: .25rem;
     }
-    .bands-list li {
+    .page-2025 .bands-list li {
         margin: .5rem 0;
     }
-    .hero-col-left,
-    .hero-col-right {
-        flex: unset;
-        max-width: 100%;
-        width: 100%;
-    }
-    .hero-flyer-img {
-        max-height: 25rem;
-        object-fit: contain;
-    }
-    .hero-col-right {
-        padding: 2rem 1.2rem;
-    }
-    /* .bands-title {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-    }
-    .band-link, .band-sleepersound, .band-keyofevil {
-        font-size: 1rem;
-    } */
 }
