@@ -2,14 +2,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Libertinus+Mono&display=swap');
 
+/* ==========================================================================
+   Site-wide styles (shared by all pages)
+   ========================================================================== */
 
 body {
     font-family: "Libertinus Mono", monospace;
     margin: 0;
     padding: 0;
-    padding-bottom: 4rem;
     color: #222;
-    background: linear-gradient(180deg, rgba(198, 215, 239, 0) 0%, rgba(51, 51, 51, 0.3) 40%, rgba(51, 51, 51, 0.9) 100%)
+    display: flex;
+    flex-direction: column;
 }
 
 footer {
@@ -21,12 +24,7 @@ footer {
 
 main {
     flex: 1;
-    min-height: 100vh;
-    background: 
-        linear-gradient(180deg, rgba(198, 215, 239, 0) 0%, rgba(51, 51, 51, 0.3) 40%, rgba(51, 51, 51, 0.9) 100%),
-        url('skateordiebackgroundimage.svg') no-repeat center top;
-    background-size: contain;
-    background-attachment: scroll;
+    min-height: calc(100vh - 7.5rem);
 }
 
 section {
@@ -41,11 +39,34 @@ a:hover {
     text-decoration: underline;
 }
 
-h2 {
-    font-family: 'Amatic SC', sans-serif;
+.amatic-sc-bold {
+    font-family: "Amatic SC", sans-serif;
+    font-weight: 700;
+    font-style: normal;
 }
 
-h1 {
+/* ==========================================================================
+   Home page (index.html) styles
+   ========================================================================== */
+
+body.page-home main {
+    height: 100vh;
+    background:
+        linear-gradient(180deg, rgba(198, 215, 239, 0) 0%, rgba(51, 51, 51, 0.3) 40%, rgba(51, 51, 51, 0.9) 100%),
+        url('skateordiebackgroundimage.svg') no-repeat center top;
+    background-size: contain;
+    background-attachment: scroll;
+}
+
+/* ==========================================================================
+   2025 event page (2025.html) styles
+   ========================================================================== */
+
+.page-2025 main {
+    padding-bottom: 4rem;
+}
+
+.page-2025 .hero-title {
     font-family: "Amatic SC", cursive;
     font-weight: 800;
     font-size: 7.5rem;
@@ -55,50 +76,45 @@ h1 {
     -webkit-text-stroke-color: black;
 }
 
-.amatic-sc-bold {
+.page-2025 .sub-header-font {
     font-family: "Amatic SC", sans-serif;
-    font-weight: 700;
-    font-style: normal;
+    font-size: 3rem;
+    color: #333;
+    font-weight: bolder;
 }
- 
-.flyer-container {
+
+.page-2025 .sponsor-title {
+    font-family: "Amatic SC", sans-serif;
+    font-size: 3rem;
+    color: #333;
+    font-weight: bolder;
+}
+
+.page-2025 .tertiary-header {
+    font-size: 2rem;
+    color: #333;
+}
+
+.page-2025 .flyer-container {
     background: #333;
     border-radius: 1rem;
 }
 
-.sub-header-font {
-    font-family: "Amatic SC", sans-serif;
-    font-size: 3rem;
-    color: #333;
-    font-weight: bolder;
-}
-
-.sponsor-title {
-    font-family: "Amatic SC", sans-serif;
-    font-size: 3rem;
-    color: #333;
-    font-weight: bolder;
-}
-
-.feature-img {
+.page-2025 .feature-img {
     height: 6rem;
 }
 
-.sponsor-img {
+.page-2025 .sponsor-img {
     max-height: 10rem;
 }
 
-.img-small {
+.page-2025 .img-small {
     width: 15rem;
 }
 
-.tertiary-header {
-    font-size: 2rem;
-    color:#333;
-}
-
 /* Bands Section Styles */
-.bands-title {
+.page-2025 .bands-title {
+    font-family: 'Amatic SC', sans-serif;
     color: #333;
     margin-top: 2rem;
     margin-bottom: 1.5rem;
@@ -111,22 +127,22 @@ h1 {
     -webkit-text-stroke-color: #ff3131;
 }
 
-.bands-list {
+.page-2025 .bands-list {
     list-style: none;
     padding: 0;
     margin: 0;
     width: 100%;
 }
 
-.bands-list li {
+.page-2025 .bands-list li {
     margin: 1.5rem 0;
 }
 
-li::marker {
+.page-2025 li::marker {
     display: none;
 }
 
-.band-link {
+.page-2025 .band-link {
     color: #333;
     text-decoration: none;
     font-size: 1.5rem;
@@ -137,7 +153,7 @@ li::marker {
     word-break: break-word;
 }
 
-.sponsor-link {
+.page-2025 .sponsor-link {
     color: #333;
     text-decoration: none;
     font-size: 1.25rem;
@@ -148,15 +164,15 @@ li::marker {
     word-break: break-word;
 }
 
-.band-link:hover,
-.band-link:focus,
-.sponsor-link:hover,
-.sponsor-link:focus {
+.page-2025 .band-link:hover,
+.page-2025 .band-link:focus,
+.page-2025 .sponsor-link:hover,
+.page-2025 .sponsor-link:focus {
     color: crimson;
     text-decoration: underline;
 }
 
-.flyer2026-img {
+.page-2025 .flyer2026-img {
     max-width: 100%;
     width: 100%;
     max-height: 90vh;
@@ -164,7 +180,7 @@ li::marker {
 }
 
 @media (min-width: 768px) {
-    .flyer2026-img {
+    .page-2025 .flyer2026-img {
         max-width: 700px;
         width: auto;
     }
@@ -172,48 +188,45 @@ li::marker {
 
 /* Responsive styles */
 @media (max-width: 900px) {
-    .col {
+    .page-2025 .col {
         width: 100%;
     }
-    .sponsor-img {
+    .page-2025 .sponsor-img {
         max-height: 4.25rem;
     }
-    .feature-img {
+    .page-2025 .feature-img {
         height: 2.5rem;
     }
-    .hero-container {
+    .page-2025 .hero-container {
         flex-direction: column;
         gap: 1rem;
         min-height: 20rem;
     }
-    /* .row {
-        flex-direction: column-reverse;
-    } */
-    .bands-title {
+    .page-2025 .bands-title {
         margin-top: 0;
         font-size: 2.5rem;
     }
 
-    .sponsor-title {
+    .page-2025 .sponsor-title {
         font-size: 2rem;
     }
 
-    .sponsor-link {
+    .page-2025 .sponsor-link {
         font-size: .75rem;
     }
 
-    h1 {
+    .page-2025 .hero-title {
         font-size: 5rem;
         -webkit-text-stroke-width: 2px;
     }
-    .band-link {
+    .page-2025 .band-link {
         font-size: 1rem;
     }
-    .flyer-container {
+    .page-2025 .flyer-container {
         border-radius: 0;
         padding: .25rem;
     }
-    .bands-list li {
+    .page-2025 .bands-list li {
         margin: .5rem 0;
     }
 }
