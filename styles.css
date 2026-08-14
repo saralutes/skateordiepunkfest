@@ -88,11 +88,21 @@ body.page-home main {
 
 .featured-music {
     position: absolute;
-    top: 50%;
+    top: 55%;
     left: 50%;
     width: calc(min(100vw, 100vh * 612 / 792) - 4rem);
     transform: translateX(-50%);
     text-align: center;
+}
+
+/* When the viewport is narrower/taller than the flyer's own aspect ratio,
+   the image only fills the top portion of main (100vh). Anchor the music
+   block to the image's actual bottom edge instead of centering on main. */
+@media (max-aspect-ratio: 612 / 792) {
+    .featured-music {
+        top: auto;
+        bottom: calc(100vh - (100vw * 792 / 612) - 2rem);
+    }
 }
 
 .band-list-home {
