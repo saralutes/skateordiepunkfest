@@ -1,26 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Permanent+Marker&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Libertinus+Mono&display=swap');
-@import url(https://db.onlinewebfonts.com/c/cf0b6b86b180d60281be204635c556bf?family=F1805++Jaeck+Map+W00+Italic);
 
-/* Import Google Fonts for Lora (for Sleepersound) */
-@import url('https://fonts.googleapis.com/css?family=Lora:700&display=swap');
-
-/* Import Misery Gymnast (for Key of Evil) via @font-face, if you have the font file */
-@font-face {
-    font-family: 'Misery Gymnast';
-    src: url('fonts/MiseryGymnast-Mj9v.ttf') format('ttf');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'Antio';
-    src: url('/fonts/antio.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-}
 
 body {
     font-family: "Libertinus Mono", monospace;
@@ -44,18 +25,10 @@ footer {
 main {
     margin: 0 auto;
     flex: 1;
-    /* background: #222 url('skateordiebackgroundimage.svg') no-repeat center center;
-    background-size: cover; */
 }
 
 section {
     margin-bottom: 2rem;
-}
-
-.permanent-marker-regular {
-  font-family: "Permanent Marker", cursive;
-  font-weight: 400;
-  font-style: normal;
 }
 
 a {
@@ -80,16 +53,6 @@ h1 {
     -webkit-text-stroke-color: black;
 }
 
-.font-md {
-    font-size: 2rem;
-}
-
-.amatic-sc-regular {
-    font-family: "Amatic SC", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-}
-
 .amatic-sc-bold {
     font-family: "Amatic SC", sans-serif;
     font-weight: 700;
@@ -99,12 +62,6 @@ h1 {
 .flyer-container {
     background: #333;
     border-radius: 1rem;
-}
-
-.centered {
-        display: flex;
-        justify-content: center;
-        align-items: center;
 }
 
 .sub-header-font {
@@ -257,24 +214,4 @@ li::marker {
     .bands-list li {
         margin: .5rem 0;
     }
-    .hero-col-left,
-    .hero-col-right {
-        flex: unset;
-        max-width: 100%;
-        width: 100%;
-    }
-    .hero-flyer-img {
-        max-height: 25rem;
-        object-fit: contain;
-    }
-    .hero-col-right {
-        padding: 2rem 1.2rem;
-    }
-    /* .bands-title {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-    }
-    .band-link, .band-sleepersound, .band-keyofevil {
-        font-size: 1rem;
-    } */
 }
