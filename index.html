@@ -30,6 +30,24 @@
         </div>
     </nav>
     <main>
+        <!-- Desktop (lg+) only: sponsor logos flanking the background artwork -->
+        <div class="sponsor-side sponsor-side-left d-none d-lg-flex">
+            <a href="https://www.instagram.com/bluedragonskate/" target="_blank" rel="noopener"><img src="sponsorImages/BlueDragon.JPG" alt="Blue Dragon Skate Shop"></a>
+            <a href="https://bremencafe.com/" target="_blank" rel="noopener"><img src="sponsorImages/Bremen.jpg" alt="Bremen Cafe"></a>
+            <a href="https://dipteridrecords.bandcamp.com/artists" target="_blank" rel="noopener"><img src="sponsorImages/DipteridRecords.jpg" alt="Dipterid Records"></a>
+            <a href="https://expertworkrecords.bandcamp.com/" target="_blank" rel="noopener"><img src="sponsorImages/ExpertWorkRecords.jpg" alt="Expert Work Records"></a>
+            <a href="http://mkepunk.com/" target="_blank" rel="noopener"><img src="sponsorImages/MKEpunk.jpg" alt="MKE Punk"></a>
+            <a href="https://midwestvertramp.godaddysites.com/" target="_blank" rel="noopener"><img src="sponsorImages/MVR.jpg" alt="Midwest Vert Ramp"></a>
+            <a href="https://www.beachharborresort.com/" target="_blank" rel="noopener"><img src="sponsorImages/beachHarbor.svg" alt="Beach Harbor Resort"></a>
+        </div>
+        <div class="sponsor-side sponsor-side-right d-none d-lg-flex">
+            <a href="http://cocoonbrewing.com/" target="_blank" rel="noopener"><img src="sponsorImages/cocoonLogo.png" alt="Cocoon Brewing"></a>
+            <a href="https://www.facebook.com/profile.php?id=61574997189093" target="_blank" rel="noopener"><img src="sponsorImages/saraLutesLogo.jpg" alt="Sara Lutes: Inclusive Officiant"></a>
+            <a href="http://skyhighskateboardshop.com/" target="_blank" rel="noopener"><img src="sponsorImages/skyHighSkateshop.webp" alt="Sky High Skateboard Shop"></a>
+            <a href="https://www.facebook.com/transactionskateshop/" target="_blank" rel="noopener"><img src="sponsorImages/transaction.jpg" alt="Transaction Skate Shop"></a>
+            <a href="https://www.sellvinylusa.com/" target="_blank" rel="noopener"><img src="sponsorImages/weBuyRecords.jpg" alt="We Buy Records"></a>
+            <a href="https://xrayarcade.com/" target="_blank" rel="noopener"><img src="sponsorImages/xrayArcade.jpeg" alt="Xray Arcade"></a>
+        </div>
         <div class="featured-music">
             <h4 class="stardos-stencil-bold">MUSIC LINEUP:</h4>
             <ul class="band-list-home list-unstyled">
@@ -47,12 +65,35 @@
                 <li><a href="https://www.instagram.com/dirtysquirreldrama/" target="_blank" rel="noopener">DJ Dirty Squirrel Drama</a></li>
                 <li><a href="https://www.instagram.com/mulva_theband/" target="_blank" rel="noopener">Mulva</a></li>
             </ul>
-            <div class="mt-3">
-                <h4 class="stardos-stencil-bold">BROUGHT TO YOU BY:</h4>
-            </div>
         </div>
     </main>
-    <footer class="text-center py-3 fixed-bottom">
+
+    <!-- Mobile (below lg) only: sponsor logo gallery beneath the music section, heading below the gallery -->
+    <section class="sponsor-gallery-section d-lg-none text-center">
+        <div class="row row-cols-3 g-2 sponsor-gallery mx-auto">
+            <div class="col"><a href="https://www.instagram.com/bluedragonskate/" target="_blank" rel="noopener" class="sponsor-box"><img src="sponsorImages/BlueDragon.JPG" alt="Blue Dragon Skate Shop"></a></div>
+            <div class="col"><a href="http://cocoonbrewing.com/" target="_blank" rel="noopener" class="sponsor-box"><img src="sponsorImages/cocoonLogo.png" alt="Cocoon Brewing"></a></div>
+            <div class="col"><a href="https://dipteridrecords.bandcamp.com/artists" target="_blank" rel="noopener" class="sponsor-box"><img src="sponsorImages/DipteridRecords.jpg" alt="Dipterid Records"></a></div>
+            <div class="col"><a href="https://www.beachharborresort.com/" target="_blank" rel="noopener" class="sponsor-box"><img src="sponsorImages/beachHarbor.svg" alt="Beach Harbor Resort"></a></div>
+            <div class="col"><a href="http://skyhighskateboardshop.com/" target="_blank" rel="noopener" class="sponsor-box"><img src="sponsorImages/skyHighSkateshop.webp" alt="Sky High Skateboard Shop"></a></div>
+            <div class="col"><a href="https://expertworkrecords.bandcamp.com/" target="_blank" rel="noopener" class="sponsor-box"><img src="sponsorImages/ExpertWorkRecords.jpg" alt="Expert Work Records"></a></div>
+            <div class="col"><a href="https://www.facebook.com/profile.php?id=61574997189093" target="_blank" rel="noopener" class="sponsor-box"><img src="sponsorImages/saraLutesLogo.jpg" alt="Sara Lutes: Inclusive Officiant"></a></div>
+            <div class="col"><a href="http://mkepunk.com/" target="_blank" rel="noopener" class="sponsor-box"><img src="sponsorImages/MKEpunk.jpg" alt="MKE Punk"></a></div>
+            <div class="col"><a href="https://www.sellvinylusa.com/" target="_blank" rel="noopener" class="sponsor-box"><img src="sponsorImages/weBuyRecords.jpg" alt="We Buy Records"></a></div>
+            <div class="col"><a href="https://bremencafe.com/" target="_blank" rel="noopener" class="sponsor-box"><img src="sponsorImages/Bremen.jpg" alt="Bremen Cafe"></a></div>
+            <div class="col"><a href="https://midwestvertramp.godaddysites.com/" target="_blank" rel="noopener" class="sponsor-box"><img src="sponsorImages/MVR.jpg" alt="Midwest Vert Ramp"></a></div>
+            <div class="col"><a href="https://www.facebook.com/transactionskateshop/" target="_blank" rel="noopener" class="sponsor-box"><img src="sponsorImages/transaction.jpg" alt="Transaction Skate Shop"></a></div>
+            <div class="col"><a href="https://xrayarcade.com/" target="_blank" rel="noopener" class="sponsor-box"><img src="sponsorImages/xrayArcade.jpeg" alt="Xray Arcade"></a></div>
+        </div>
+        <h4 class="stardos-stencil-bold sponsor-heading">BROUGHT TO YOU BY:</h4>
+    </section>
+
+    <!-- Desktop (lg+) only: "Brought to you by" text, below the music section -->
+    <section class="sponsor-text-section d-none d-lg-block text-center">
+        <h4 class="stardos-stencil-bold sponsor-heading">BROUGHT TO YOU BY:</h4>
+    </section>
+
+    <footer class="text-center py-3">
         <p>&copy; 2025 Skate or Die Punk Fest <a href="mailto:skateordiepunkfest@gmail.com">skateordiepunkfest@gmail.com</a></p>
     </footer>
     <script src="script.js"></script>
