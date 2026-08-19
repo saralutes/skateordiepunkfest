@@ -28,10 +28,6 @@ main {
     min-height: calc(100vh - 7.5rem);
 }
 
-section {
-    margin-bottom: 2rem;
-}
-
 a {
     color: crimson;
 }
@@ -95,14 +91,10 @@ body.page-home {
     background-color: #83817f;
 }
 
-body.page-home main {
+body.page-home .hero {
     position: relative;
-    /* Override the site-wide flex-grow/min-height so the hero hugs the
-       background image's own rendered size (contain-fit) instead of
-       stretching to fill the viewport, which would leave a blank gap
-       above the sections below. */
-    flex: 0 0 auto;
-    min-height: 0;
+    /* The hero hugs the background image's own rendered size (contain-fit)
+       so no blank space is left above the sections below it. */
     height: min(100vh, calc(100vw * 792 / 612));
     background:
         linear-gradient(180deg, rgba(131, 129, 127, 0) 0%, rgba(131, 129, 127, 0.35) 40%, rgba(131, 129, 127, 1) 100%),
@@ -113,7 +105,7 @@ body.page-home main {
 
 .featured-music {
     position: absolute;
-    top: 55%;
+    top: 48%;
     left: 50%;
     width: calc(min(100vw, 100vh * 612 / 792) - 4rem);
     transform: translateX(-50%);
@@ -128,7 +120,7 @@ body.page-home main {
     height: 100%;
     /* Matches the empty space left by the background image's contain-fit. */
     width: calc((100vw - min(100vw, 100vh * 612 / 792)) / 2);
-    max-width: 10rem;
+    max-width: 12rem;
     min-width: 5rem;
     display: flex;
     align-items: center;
@@ -136,15 +128,25 @@ body.page-home main {
     z-index: 2;
 }
 
-.sponsor-side > .row {
+/* Same packed collage as the mobile gallery: one column at lg, two at xl. */
+.sponsor-side .sponsor-gallery {
     width: 100%;
-    height: 100%;
-    align-content: space-evenly;
+    max-width: none;
+    columns: 1;
+    text-align: center;
 }
 
 @media (min-width: 1200px) {
     .sponsor-side {
-        max-width: 22rem;
+        max-width: 26rem;
+    }
+
+    .sponsor-side .sponsor-gallery {
+        columns: 2;
+    }
+
+    .sponsor-side img {
+        max-height: min(10rem, 24vh);
     }
 }
 
@@ -157,20 +159,28 @@ body.page-home main {
 }
 
 .sponsor-side img {
+    /* Fill the column width, capped in height so the whole stack still fits
+       beside the hero artwork (eight logos per column at lg, four at xl). */
     max-width: 100%;
-    max-height: 4rem;
+    max-height: min(10rem, 10vh);
 }
 
-/* Mobile: keep the music lineup near the bottom of the hero so there is no
-   dead space above the sponsor logos. */
+/* Mobile: the hero grows with its content so the sponsor logos flow directly
+   under the music lineup instead of the lineup sitting in a fixed-height box. */
 @media (max-width: 991.98px) {
-    .featured-music {
-        top: auto;
-        bottom: 0;
+    body.page-home .hero {
+        height: auto;
+        /* Keeps the lineup starting where it did when it was pinned at 48%. */
+        padding-top: calc(min(100vh, 100vw * 792 / 612) * 0.48);
+        /* Fade stays sized to the artwork, not to the taller hero. */
+        background-size: 100% calc(100vw * 792 / 612), contain;
     }
 
-    .sponsor-gallery-section {
-        padding-top: 1rem;
+    .featured-music {
+        position: static;
+        width: auto;
+        transform: none;
+        padding: 0 2rem;
     }
 }
 
@@ -186,19 +196,25 @@ body.page-home main {
 
 /* Sponsor logo gallery (mobile, below lg) */
 .sponsor-gallery-section {
-    background: #83817f;
-    padding: 2rem 1rem;
-    margin-bottom: 0;
+    text-align: center;
 }
 
+/* Packed collage of logos, like the flyer: four columns, each logo filling
+   its column width so its height follows its own aspect ratio. */
 .sponsor-gallery {
-    max-width: 28rem;
+    max-width: 30rem;
+    columns: 4;
+    column-gap: .5rem;
 }
 
-/* Logos scale to their column width (capped in height) so their relative
-   sizes match the printed flyer. */
+.sponsor-gallery a {
+    display: block;
+    margin-bottom: .5rem;
+    break-inside: avoid;
+}
+
 .sponsor-gallery img {
-    max-height: 5rem;
+    width: 100%;
 }
 
 /* Event info from the flyer (concessions & after party) */
