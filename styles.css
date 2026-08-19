@@ -10,7 +10,8 @@
 body {
     font-family: "Libertinus Mono", monospace;
     margin: 0;
-    padding: 0;
+    /* Room for the fixed footer so it never covers page content. */
+    padding: 0 0 4.5rem;
     color: #222;
     display: flex;
     flex-direction: column;
@@ -26,10 +27,6 @@ footer {
 main {
     flex: 1;
     min-height: calc(100vh - 7.5rem);
-}
-
-section {
-    margin-bottom: 2rem;
 }
 
 a {
@@ -71,16 +68,37 @@ a:hover {
   font-style: normal;
 }
 
+.stardos-stencil-regular {
+  font-family: "Stardos Stencil", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.stardos-stencil-bold {
+  font-family: "Stardos Stencil", system-ui;
+  font-weight: 700;
+  font-style: normal;
+}
+
+
 
 /* ==========================================================================
    Home page (index.html) styles
    ========================================================================== */
 
-body.page-home main {
+body.page-home {
+    /* Flyer's gray paper color, shared by the hero fade and the sections
+       below it so no seams show between them. */
+    background-color: #83817f;
+}
+
+body.page-home .hero {
     position: relative;
-    height: 100vh;
+    /* The hero hugs the background image's own rendered size (contain-fit)
+       so no blank space is left above the sections below it. */
+    height: min(100vh, calc(100vw * 792 / 612));
     background:
-        linear-gradient(180deg, rgba(198, 215, 239, 0) 0%, rgba(51, 51, 51, 0.3) 40%, rgba(51, 51, 51, 0.9) 100%),
+        linear-gradient(180deg, rgba(131, 129, 127, 0) 0%, rgba(131, 129, 127, 0.35) 40%, rgba(131, 129, 127, 1) 100%),
         url('skateordiebackgroundimage.svg') no-repeat center top;
     background-size: contain;
     background-attachment: scroll;
@@ -88,25 +106,140 @@ body.page-home main {
 
 .featured-music {
     position: absolute;
-    top: 55%;
+    top: 48%;
     left: 50%;
     width: calc(min(100vw, 100vh * 612 / 792) - 4rem);
     transform: translateX(-50%);
     text-align: center;
 }
 
-/* When the viewport is narrower/taller than the flyer's own aspect ratio,
-   the image only fills the top portion of main (100vh). Anchor the music
-   block to the image's actual bottom edge instead of centering on main. */
-@media (max-aspect-ratio: 612 / 792) {
-    .featured-music {
-        top: auto;
-        bottom: calc(100vh - (100vw * 792 / 612) - 2rem);
+/* Sponsor logos flanking the hero artwork (desktop, lg and up). One column
+   at lg, two columns at xl (see the row-cols-xl-2 markup). */
+.sponsor-side {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    /* Matches the empty space left by the background image's contain-fit. */
+    width: calc((100vw - min(100vw, 100vh * 612 / 792)) / 2);
+    max-width: 12rem;
+    min-width: 5rem;
+    display: flex;
+    align-items: center;
+    padding: 1rem 0.5rem;
+    z-index: 2;
+}
+
+/* One column at lg, two at xl, spread over the full height of the hero. */
+.sponsor-side .sponsor-gallery {
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-content: space-evenly;
+    justify-items: center;
+    text-align: center;
+}
+
+.sponsor-side .sponsor-gallery a {
+    margin-bottom: 0;
+}
+
+@media (min-width: 1200px) {
+    .sponsor-side {
+        max-width: 26rem;
+    }
+
+    .sponsor-side .sponsor-gallery {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1rem;
+    }
+
+    .sponsor-side img {
+        max-height: min(14rem, 21vh);
     }
 }
 
+.sponsor-side-left {
+    left: 0;
+}
+
+.sponsor-side-right {
+    right: 0;
+}
+
+.sponsor-side img {
+    /* Fill the column width, capped in height so the whole stack still fits
+       beside the hero artwork (eight logos per column at lg, four at xl). */
+    max-width: 100%;
+}
+
+/* Mobile: the hero grows with its content so the sponsor logos flow directly
+   under the music lineup instead of the lineup sitting in a fixed-height box. */
+@media (max-width: 991.98px) {
+    body.page-home .hero {
+        height: auto;
+        /* Keeps the lineup starting where it did when it was pinned at 48%. */
+        padding-top: calc(min(100vh, 100vw * 792 / 612) * 0.48);
+        /* Fade stays sized to the artwork, not to the taller hero. */
+        background-size: 100% calc(100vw * 792 / 612), contain;
+    }
+
+    .featured-music {
+        position: static;
+        width: auto;
+        transform: none;
+        padding: 0 2rem;
+    }
+}
+
+/* "Brought to you by" text below the music section (desktop) */
+.sponsor-text-section {
+    padding: 2rem 1rem;
+    margin-bottom: 0;
+}
+
+.sponsor-heading {
+    text-transform: uppercase;
+}
+
+/* Sponsor logo gallery (mobile, below lg) */
+.sponsor-gallery-section {
+    text-align: center;
+}
+
+/* Packed collage of logos, like the flyer: four columns, each logo filling
+   its column width so its height follows its own aspect ratio. */
+.sponsor-gallery {
+    max-width: 30rem;
+    columns: 4;
+    column-gap: .5rem;
+}
+
+.sponsor-gallery a {
+    display: block;
+    margin-bottom: .5rem;
+    break-inside: avoid;
+}
+
+.sponsor-gallery img {
+    width: 100%;
+}
+
+/* Event info from the flyer (concessions & after party) */
+.event-info {
+    text-transform: uppercase;
+    font-size: .9rem;
+}
+
+.event-info-section {
+    background: #83817f;
+    padding: 1.5rem 1rem 2rem;
+    margin-bottom: 0;
+}
+
 .band-list-home {
-    margin: 1rem auto 0;
+    margin: .25rem auto 0;
     padding: 0 1rem;
     width: 100%;
     text-transform: uppercase;
